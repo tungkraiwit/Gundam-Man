@@ -1,0 +1,17 @@
+.main-menu-button {
+
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    opacity: 0.2;
+    border-color: transparent;
+  }
+}
+
+.main-menu-button-active {
+  background-color: white;
+  opacity: 0.2;
+}
