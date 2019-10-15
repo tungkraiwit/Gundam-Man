@@ -1,0 +1,11 @@
+@import "../node_modules/bulma/sass/utilities/_all";
+
+.layout-content {
+  @media screen and (min-width: $tablet ){
+    margin-left: 300px;
+  }
+
+  @media screen and (max-width: $tablet ){
+    margin-left: 0px;
+  }
+}
