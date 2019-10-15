@@ -17,7 +17,7 @@ class MainMenu extends React.Component {
     )
     
     return (
-      <div class="main-menu" style={{ background: '#204F5F' , position: "fixed" , width: "300px" , top: "0px", margin: "0px", height: "-webkit-fill-available"}}>
+      <div class="main-menu" style={{ background: '#204F5F' , position: "fixed" , width: "200px" , top: "0px", margin: "0px", height: "-webkit-fill-available"}}>
         <div className="columns has-text-centered">
           <div className="column">
             <div className="columns" style={{margin: "2rem"}}>
