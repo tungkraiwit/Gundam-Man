@@ -1,19 +1,20 @@
 import React from 'react'
 import MainMenu from '../components/MainMenu'
 
+import './Layout.scss'
 
 class Layout extends React.Component {
   render() {
     return (
-      <div className="columns">
-        <div className="column" style={{width: '300px', position: 'fixed', height: '-webkit-fill-available',background:'#204F5F'}}>
-          <MainMenu />
-        </div>
-        <div className="column" style={{ marginLeft: '300px' }}>
-          {this.props.children}
-        </div>
+      <>
+        <MainMenu />
+        <div className="columns">
+          <div className="column layout-content" >
+            {this.props.children}
+          </div>
 
-      </div>
+        </div>
+      </>
     )
   }
 }

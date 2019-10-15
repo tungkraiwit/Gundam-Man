@@ -1,3 +1,5 @@
+@import "../node_modules/bulma/sass/utilities/_all";
+
 .main-menu-button {
 
   background-color: transparent;
@@ -15,3 +17,10 @@
   background-color: white;
   opacity: 0.2;
 }
+
+.main-menu { 
+  @media screen and (max-width: $tablet ) {
+    display: none
+  }
+}
+
