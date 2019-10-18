@@ -23,7 +23,7 @@ class MainMenu extends React.Component {
             <div className="columns" style={{margin: "2rem"}}>
               <div className="column" style={{ color: 'white'}}>
                 <FontAwesomeIcon icon={faCircle} size="6x" />
-                <p>Employee</p>
+                <p className="is-size-5">Employee</p>
               </div>
             </div>
             <div className="columns">

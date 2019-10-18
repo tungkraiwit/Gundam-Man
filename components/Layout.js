@@ -8,7 +8,7 @@ class Layout extends React.Component {
     return (
       <>
         <MainMenu />
-        <div className="columns">
+        <div className="columns" style={{background: "#FEFAEF"}}>
           <div className="column layout-content" >
             {this.props.children}
           </div>
