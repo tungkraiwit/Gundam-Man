@@ -17,8 +17,8 @@
     "reactstrap": "^8.0.1"
   },
   "scripts": {
-    "start": "next",
-    "build": "next",
+    "start": "next start",
+    "build": "next build",
     "dev": "next"
   },
   "eslintConfig": {
