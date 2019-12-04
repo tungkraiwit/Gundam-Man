@@ -2,8 +2,7 @@ import React from 'react'
 
 class Content extends React.Component {
   render() {
-
-    const title = "Catalog"
+    const { title } = this.props
     return (
       <div>
       <div className="columns">
