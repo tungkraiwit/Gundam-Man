@@ -2,18 +2,22 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
+import Link from 'next/link'
+
 import './MainMenu.scss'
 
 class MainMenu extends React.Component {
   render() {
-    const MainMenuButton = ({title, active}) => (
+    const MainMenuButton = ({title, active, url}) => (
       <div className="columns">
         <div className="column">
-          <button className={ "button main-menu-button" + (active ? "-active" : "")}>
-            <p>{title}</p>
-          </button>
+          <Link href={url}>
+            <button className={ "button main-menu-button" + (active ? "-active" : "")}>
+              <p>{title}</p>
+            </button>
+          </Link>
         </div>
-      </div>
+      </div>  
     )
     
     return (
@@ -28,8 +32,8 @@ class MainMenu extends React.Component {
             </div>
             <div className="columns">
               <div className="column">
-                <MainMenuButton title="Catalogs" />
-                <MainMenuButton title="Catalogs" />
+                <MainMenuButton title="Catalogs"  url="/catalogs"/>
+                <MainMenuButton title="Customers" url="/customers"/>
                 <MainMenuButton title="Catalogs" />
                 <MainMenuButton title="Catalogs" />
                 <MainMenuButton title="Catalogs" />
