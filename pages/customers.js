@@ -8,16 +8,30 @@ class Catalogs extends React.Component {
     return (
       <div>
         <Layout>
-          <Content title="Customers"/>
+          <Content title="Customers" />
           <Fetch url="/customer">
-            { data => {
-              return data.map(customer=> (
-                <div>
-                  <p>
-                    Name: {customer.customerName}
-                  </p>
-                </div>
+            {data => {
+              const customerList = data.map(customer => (
+                <tr>
+                  <td>{customer.customerNumber}</td>
+                  <td>{customer.customerName}</td>
+                </tr>
               ))
+              return (
+                <div style={{marginLeft:"50px" }}>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>id</th>
+                      <th>Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      {customerList}
+                  </tbody>
+                </table>
+                </div>
+              )
             }}
           </Fetch>
         </Layout>
