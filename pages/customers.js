@@ -15,6 +15,8 @@ class Catalogs extends React.Component {
                 <tr>
                   <td>{customer.customerNumber}</td>
                   <td>{customer.customerName}</td>
+                  <td>{customer.contactFirstName}</td>
+                  <td>{customer.contactLastName}</td>
                 </tr>
               ))
               return (
@@ -24,6 +26,8 @@ class Catalogs extends React.Component {
                     <tr>
                       <th>id</th>
                       <th>Name</th>
+                      <th>Contact firstname</th>
+                      <th>Contact lastname</th>
                     </tr>
                   </thead>
                   <tbody>
