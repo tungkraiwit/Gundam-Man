@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import Content from '../components/content'
 import Fetch from '../components/fetch'
 
-class Catalogs extends React.Component {
+class Customers extends React.Component {
   render() {
     return (
       <div>
@@ -44,4 +44,4 @@ class Catalogs extends React.Component {
   }
 }
 
-export default Catalogs
+export default Customers
