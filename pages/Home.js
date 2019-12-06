@@ -4,19 +4,20 @@ import Fetch from '../components/fetch'
 class Home extends React.Component {
   render() {
     return (
-      <div className="columns" style={{ marginLeft: "200px", marginRight: "200px" }}>
+      <div className="columns" style={{background:"#FEFAEF" }}>
         <div className="column">
-          <div className="columns is-mobile">
+          <div className="columns is-mobile "style={{marginLeft: "200px", marginRight: "200px"}}>
             <div className="column" style={{ marginTop: "70px" }}>
-              <h1 style={{fontSize:"50px"}}>GUNDUM MAN</h1>
+              <h1 style={{fontSize:"50px",color:"#204F5F"}}>GUNDUM MAN</h1>
             </div>
             <div className="column" style={{ marginTop: "70px" }}>
-              <button className="button is-rounded is-pulled-right">Log in</button> 
+              <button className="button is-rounded is-pulled-right" style={{marginTop:"17px",background:"#F19671",color:"#FFFFFF"}}>Log in</button> 
             </div>
             </div>
-            <div className="columns">
+            <hr style={{marginLeft: "200px", marginRight: "200px"}}></hr>
+            <div className="columns" style={{marginLeft: "200px", marginRight: "200px"}}>
             <div className="column is-3">
-        <article class="message " style={{background:"#FEFAEF"}}>
+        <article class="message " style={{background:"#FFFFFF"}}>
             <div class="message-header" style={{background:"#F19671"}}>
                 <p>Categories</p>
             </div>
@@ -50,7 +51,7 @@ class Home extends React.Component {
               {data => {
                 const productList = data.map(product => (
                   <div className="column is-4">
-                  <div class="card">
+                  <div class="card" style={{border:"none"}}>
                   <div class="card-image">
                     <figure class="image is-4by3">
                       <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image" ></img>
