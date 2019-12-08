@@ -11,11 +11,10 @@ class Content extends React.Component {
         <div className="is-centered is-size-3" style={{margin: '12px'}}>{title}</div>
         </div>
       </div>
-      <div className="columns">
-        <div className="column">
-        
+        {/* <div className="columns">
+        <div className="column">        
         </div>
-      </div>
+      </div> */}
       </div>
     )
   }

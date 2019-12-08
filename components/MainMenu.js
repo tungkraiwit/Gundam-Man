@@ -32,9 +32,9 @@ class MainMenu extends React.Component {
             </div>
             <div className="columns">
               <div className="column">
-                <MainMenuButton title="Catalogs"  url="/catalogs"/>
+                <MainMenuButton title="Product"  url="/product"/>
                 <MainMenuButton title="Customers" url="/customers"/>
-                <MainMenuButton title="Catalogs" />
+                <MainMenuButton title="Employee" url="employees"/>
                 <MainMenuButton title="Catalogs" />
                 <MainMenuButton title="Catalogs" />
               </div>

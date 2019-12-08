@@ -1,3 +1,4 @@
-import LoginFrom from '../components/LoginForm'
+// import LoginFrom from '../components/LoginForm'
+import Home from './Home'
 
-export default LoginFrom
+export default Home
