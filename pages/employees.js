@@ -5,28 +5,32 @@ import Fetch from '../components/fetch'
 
 
 class Catalogs extends React.Component {
+  
   render() {
+    
     return (
       <div>
         <Layout>
           <Content title="Customer" />
-          <table border="1px" align="center">
-            <th>
+          <table className="table" style={{ margin: "100px", marginTop: "20px" }}>
+            <thead>
               <tr>
-                <td align="center">Employees Number</td>
-                <td align="center">FirstName</td>
-                <td align="center">LastName</td>
-                <td align="center">Extension</td>
-                <td align="center">Email</td>
-                <td align="center">Office Code</td>
-                <td align="center">Reports To</td>
-                <td align="center">Job Title</td>
+                <th>Employees Number</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Extension</th>
+                <th>Email</th>
+                <th>Office Code</th>
+                <th>Reports To</th>
+                <th>Job Title</th>
               </tr>
-              <Fetch url="/users">
-                {data => {
-                  return data.map(employees => (
+            </thead>
+            <Fetch url="/users">
+              {data => {
+                return data.map(employees => (
+                  <tbody>
                     <tr>
-                      <td>
+                      <td align="center">
                         {employees.employeeNumber}
                       </td>
                       <td>
@@ -41,7 +45,7 @@ class Catalogs extends React.Component {
                       <td>
                         {employees.email}
                       </td>
-                      <td>
+                      <td align="center">
                         {employees.officeCode}
                       </td>
                       <td>
@@ -52,12 +56,12 @@ class Catalogs extends React.Component {
                       </td>
                       <td>
                         <button>edit</button>
-                      </td>
+                        </td> 
                     </tr>
-                  ))
-                }}
-              </Fetch>
-            </th>
+                  </tbody>
+                ))
+              }}
+            </Fetch>
           </table>
         </Layout>
       </div>
