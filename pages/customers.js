@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import Content from '../components/content'
 import Fetch from '../components/fetch'
 import Popup from 'reactjs-popup'
+import FormMember from '../components/form-member'
 
 
 class Catalogs extends React.Component {
@@ -78,13 +79,14 @@ class Catalogs extends React.Component {
                           trigger={<button> more </button>}
                           modal
                           closeOnDocumentClick >
-                          <span> Modal content </span>
+                         <FormMember/>
+                         <button className="button is-pulled-right is-rounded" style={{margin:"50px", marginTop:"0px",background:"#F19671",color:"#FFFFFF"}}>Save Change</button> 
                         </Popup>
                       </td>
                     </tr>
                   </tbody>
-            ))
-          }}
+                ))
+              }}
             </Fetch>
           </table>
         </Layout>
@@ -92,5 +94,6 @@ class Catalogs extends React.Component {
     )
   }
 }
+
 
 export default Catalogs
