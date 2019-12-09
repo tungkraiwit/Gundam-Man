@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Content from '../components/content'
 import Fetch from '../components/fetch'
+import Popup from 'reactjs-popup'
+
 
 class Catalogs extends React.Component {
   render() {
@@ -9,28 +11,30 @@ class Catalogs extends React.Component {
       <div>
         <Layout>
           <Content title="Customers" />
-          <table border="1px">
-            <th>
+          <table className="table" style={{ margin: "100px", marginTop: "10px" }}>
+            <thead>
               <tr>
-                <td align="center">Customer Number</td>
-                <td align="center">Customer Name</td>
-                <td align="center">Contact FirstName</td>
-                <td align="center">Contact LastName</td>
-                <td align="center">Phone</td>
-                <td align="center">AddressLine1</td>
-                <td align="center">AddressLine2</td>
-                <td align="center">City</td>
-                <td align="center">State</td>
-                <td align="center">PostalCode</td>
-                <td align="center">Country</td>
-                <td align="center">SalesRep Employee Number</td>
-                <td align="center">Credit Limit</td>
+                <th align="center">Customer Number</th>
+                <th align="center">Customer Name</th>
+                <th align="center">Contact FirstName</th>
+                <th align="center">Contact LastName</th>
+                <th>Phone</th>
+                {/* <th align="center">AddressLine1</th>
+                <th align="center">AddressLine2</th>
+                <th align="center">City</th>
+                <th align="center">State</th>
+                <th align="center">PostalCode</th>
+                <th align="center">Country</th>
+                <th align="center">SalesRep Employee Number</th>
+                <th align="center">Credit Limit</th> */}
               </tr>
-              <Fetch url="/customer">
-                {data => {
-                  return data.map(customer => (
+            </thead>
+            <Fetch url="/customer">
+              {data => {
+                return data.map(customer => (
+                  <tbody>
                     <tr>
-                      <td>
+                      <td align="center">
                         {customer.customerNumber}
                       </td>
                       <td>
@@ -45,7 +49,7 @@ class Catalogs extends React.Component {
                       <td>
                         {customer.phone}
                       </td>
-                      <td>
+                      {/* <td>
                         {customer.addressLine1}
                       </td>
                       <td>
@@ -68,15 +72,20 @@ class Catalogs extends React.Component {
                       </td>
                       <td>
                         {customer.creditLimit}
-                      </td>
+                      </td> */}
                       <td>
-                        <button>edit</button>
+                        <Popup
+                          trigger={<button> more </button>}
+                          modal
+                          closeOnDocumentClick >
+                          <span> Modal content </span>
+                        </Popup>
                       </td>
                     </tr>
-                  ))
-                }}
-              </Fetch>
-            </th>
+                  </tbody>
+            ))
+          }}
+            </Fetch>
           </table>
         </Layout>
       </div >
