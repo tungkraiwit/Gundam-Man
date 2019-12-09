@@ -12,6 +12,18 @@ class Catalogs extends React.Component {
       <div>
         <Layout>
           <Content title="Customers" />
+
+          <div class="field has-addons" style={{marginTop:"0px",marginBottom:"0px",marginLeft:"100px"}}>
+            <div class="control">
+              <input class="input" type="text" placeholder="Find a product " />
+            </div>
+            <div class="control">
+              <a class="button " style={{background:"#F19671",color:"#FFFFFF"}}>
+                Search
+              </a>
+            </div>
+          </div>
+
           <table className="table" style={{ margin: "100px", marginTop: "10px" }}>
             <thead>
               <tr>
@@ -79,8 +91,8 @@ class Catalogs extends React.Component {
                           trigger={<button> more </button>}
                           modal
                           closeOnDocumentClick >
-                         <FormMember/>
-                         <button className="button is-pulled-right is-rounded" style={{margin:"50px", marginTop:"0px",background:"#F19671",color:"#FFFFFF"}}>Save Change</button> 
+                          <FormMember />
+                          <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }}>Save Change</button>
                         </Popup>
                       </td>
                     </tr>
