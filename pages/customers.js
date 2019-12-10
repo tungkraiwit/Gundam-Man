@@ -69,15 +69,28 @@ class Catalogs extends React.Component {
                         >
                           {close => (
                             <span>
-                              <button
+                              {/* <button
                                   className="button is-pulled-right"
                                   onClick={() => {close()}}
                                 >
                                   x
-                                </button>
-                              <FormMember />
-                                <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }}>Save Change</button>
-                                
+                                </button> */}
+                              <div style={{margin:"50px"}}>
+                                <p>customerNumber    : {customer.customerNumber}</p>
+                                <p>customerName      : {customer.customerName}</p>
+                                <p>contactLastName   : {customer.contactLastName}</p>
+                                <p>contactFirstNmae  : {customer.contactFirstName}</p>
+                                <p>Phone             : {customer.phone}</p>
+                                <p>AddressLine1      : {customer.addressLine1}</p>
+                                <p>AddressLine2      : {customer.addressLIne2}</p>
+                                <p>city              : {customer.city}</p>
+                                <p>state             : {customer.state}</p>
+                                <p>PoatalCode        : {customer.postalCode}</p>
+                                <p>Country           : {customer.country}</p>
+                                <p>creditLimit       : {customer.creditLimit}</p>
+                              </div>
+                                <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px",marginLeft:"0px" ,background: "#F19671", color: "#FFFFFF" }} onClick={() => {close()}}>back</button>
+                                <button className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >edit</button> 
                             </span>
                           )}
                         </Popup>
