@@ -24,7 +24,7 @@ class Home extends React.Component {
           <hr style={{ marginLeft: "200px", marginRight: "200px" }}></hr>
           <div className="columns" style={{ marginLeft: "170px", marginRight: "170px" }}>
             <div className="column">
-              <Fetch url="/product">
+              <Fetch url="/products">
                 {data => {
                   const productList = data.map(product => (
                     <div className="column is-3">

@@ -23,7 +23,7 @@ class Catalogs extends React.Component {
                 <td align="center">buyPrice</td>
                 <td align="center">MSRP</td>
               </tr>
-              <Fetch url="/product">
+              <Fetch url="/products">
                 {data => {
                   return data.map(product => (
                     <tr>
