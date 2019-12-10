@@ -4,7 +4,6 @@ import Content from '../components/content'
 import Fetch from '../components/fetch'
 import Popup from 'reactjs-popup'
 import FormMember from '../components/form-member'
-import Router from 'next/router'
 
 class Catalogs extends React.Component {
   constructor(props) {
@@ -14,11 +13,6 @@ class Catalogs extends React.Component {
   }
   closeModal() {
     this.setState({ open: false });
-  }
-  onClick(customer){
-    Router.push({
-      pathname: '/edit'
-    })
   }
   render() {
     return (
