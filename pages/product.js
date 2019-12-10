@@ -10,22 +10,24 @@ class Catalogs extends React.Component {
       <div>
         <Layout>
           <Content title="Product" />
-          <table border="1px">
-            <th>
+          <table className="table" style={{margin:"70px",marginTop:"0px"}}>
+            <thead>
               <tr>
-                <td align="center">Product Code</td>
-                <td align="center">Product Name</td>
-                <td align="center">Product Line</td>
-                <td align="center">Product Scale</td>
-                <td align="center">Product Vendor</td>
-                <td align="center">Product Description</td>
-                <td align="center">quantity In Stock</td>
-                <td align="center">buyPrice</td>
-                <td align="center">MSRP</td>
-              </tr>
+                <th align="center">Product Code</th>
+                <th align="center">Product Name</th>
+                <th align="center">Product Line</th>
+                <th align="center">Product Scale</th>
+                <th align="center">Product Vendor</th>
+                <th align="center">Product Description</th>
+                <th align="center">quantity In Stock</th>
+                <th align="center">buyPrice</th>
+                <th align="center">MSRP</th>
+               </tr>
+              </thead>
               <Fetch url="/products">
                 {data => {
                   return data.map(product => (
+                    <tbody>
                     <tr>
                       <td>
                         {product.productCode}
@@ -58,10 +60,10 @@ class Catalogs extends React.Component {
                         <button>edit</button>
                       </td>
                     </tr>
+                    </tbody>
                   ))
                 }}
               </Fetch>
-            </th>
           </table>
         </Layout>
       </div>
