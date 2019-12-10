@@ -77,19 +77,20 @@ class Catalogs extends React.Component {
                                   x
                                 </button> */}
                               <div style={{margin:"50px"}}>
-                                <p>customerNumber    : {customer.customer_number}</p>
-                                <p>customerName      : {customer.customer_name}</p>
-                                <p>contactLastName   : {customer.contact_lastname}</p>
-                                <p>contactFirstNmae  : {customer.contact_firstname}</p>
-                                <p>Phone             : {customer.phone}</p>
-                                <p>AddressLine1      : {customer.addressLine1}</p>
-                                <p>AddressLine2      : {customer.addressLIne2}</p>
-                                <p>city              : {customer.city}</p>
-                                <p>state             : {customer.state}</p>
-                                <p>PoatalCode        : {customer.postalCode}</p>
-                                <p>Country           : {customer.country}</p>
-                                <p>creditLimit       : {customer.creditlimit}</p>
-                                <p>checkNumber       : {customer.check_number}</p>
+                                <h2 align="center" style ={{color: "#48bbe8"}}>more Information</h2>
+                                <p style={{margin:"5px"}}>customerNumber    : {customer.customer_number}</p>
+                                <p style={{margin:"5px"}}>customerName      : {customer.customer_name}</p>
+                                <p style={{margin:"5px"}}>contactLastName   : {customer.contact_lastname}</p>
+                                <p style={{margin:"5px"}}>contactFirstNmae  : {customer.contact_firstname}</p>
+                                <p style={{margin:"5px"}}>Phone             : {customer.phone}</p>
+                                <p style={{margin:"5px"}}>AddressLine1      : {customer.addressLine1}</p>
+                                <p style={{margin:"5px"}}>AddressLine2      : {customer.addressLIne2}</p>
+                                <p style={{margin:"5px"}}>city              : {customer.city}</p>
+                                <p style={{margin:"5px"}}>state             : {customer.state}</p>
+                                <p style={{margin:"5px"}}>PoatalCode        : {customer.postalCode}</p>
+                                <p style={{margin:"5px"}}>Country           : {customer.country}</p>
+                                <p style={{margin:"5px"}}>creditLimit       : {customer.creditlimit}</p>
+                                <p style={{margin:"5px"}}>checkNumber       : {customer.check_number}</p>
                               </div>
                                 <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px",marginLeft:"0px" ,background: "#F19671", color: "#FFFFFF" }} onClick={() => {close()}}>back</button>
                                 {/* <button onClick={this.onClick} className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >edit</button>  */}
