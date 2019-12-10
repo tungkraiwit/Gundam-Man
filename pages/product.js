@@ -48,13 +48,13 @@ class Catalogs extends React.Component {
                         {product.product_description}
                       </td>
                       <td>
-                        {product.quantity_inStock}
+                        {product.quantity_instock}
                       </td>
                       <td>
                         {product.buy_price}
                       </td>
                       <td>
-                        {product.MSRP}
+                        {product.msrp}
                       </td>
                       <Popup
                           trigger={<button> more </button>}
@@ -75,9 +75,9 @@ class Catalogs extends React.Component {
                                 <p>productScale       : {product.product_scale}</p>
                                 <p>productVendor      : {product.product_vendor}</p>
                                 <p>productDescription : {product.product_description}</p>
-                                <p>quantityInStock    : {product.quantity_inStock}</p>
+                                <p>quantityInStock    : {product.quantity_instock}</p>
                                 <p>buyPrice           : {product.buy_price}</p>
-                                <p>MSRP               : {product.MSRP}</p>
+                                <p>MSRP               : {product.msrp}</p>
                                 <p>textDescription    : {product.text_description}</p>
                               </div>
                                 <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px",marginLeft:"0px" ,background: "#F19671", color: "#FFFFFF" }} onClick={() => {close()}}>back</button>
