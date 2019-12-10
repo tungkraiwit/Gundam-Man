@@ -65,7 +65,9 @@ class Catalogs extends React.Component {
                       <td>
                         <Popup
                           trigger={<button> more </button>}
-                          modal
+                          modal 
+                          on="focus"
+                          
                         >
                           {close => (
                             <span>
