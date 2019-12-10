@@ -37,6 +37,7 @@ class MainMenu extends React.Component {
         </div>
       </div>
     )
+    const {jobTitle} = this.state
 
     return (
       <div class="main-menu" style={{ background: '#204F5F', position: "fixed", width: "200px", top: "0px", margin: "0px", height: "-webkit-fill-available" }}>
@@ -45,7 +46,7 @@ class MainMenu extends React.Component {
             <div className="columns" style={{ margin: "2rem" }}>
               <div className="column" style={{ color: 'white' }}>
                 <FontAwesomeIcon icon={faCircle} size="6x" />
-                <p className="is-size-5">{this.state.jobTitle}</p>
+                <p className="is-size-5">{jobTitle}</p>
               </div>
             </div>
             <div className="columns">
