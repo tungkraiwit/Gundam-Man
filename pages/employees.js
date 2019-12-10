@@ -11,7 +11,7 @@ class Catalogs extends React.Component {
     return (
       <div>
         <Layout>
-          <Content title="Customer" />
+          <Content title="Employees" />
           <table className="table" style={{ margin: "100px", marginTop: "20px" }}>
             <thead>
               <tr>
@@ -19,13 +19,13 @@ class Catalogs extends React.Component {
                 <th>FirstName</th>
                 <th>LastName</th>
                 <th>Extension</th>
-                <th>Email</th>
+                <th align="center">Email</th>
                 <th>Office Code</th>
                 <th>Reports To</th>
-                <th>Job Title</th>
+                <th align="center">Job Title</th>
               </tr>
             </thead>
-            <Fetch url="/users">
+            <Fetch url="/employees">
               {data => {
                 return data.map(employees => (
                   <tbody>

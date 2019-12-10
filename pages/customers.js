@@ -5,7 +5,6 @@ import Fetch from '../components/fetch'
 import Popup from 'reactjs-popup'
 import FormMember from '../components/form-member'
 
-
 class Catalogs extends React.Component {
   render() {
     return (
@@ -20,17 +19,9 @@ class Catalogs extends React.Component {
                 <th align="center">Contact FirstName</th>
                 <th align="center">Contact LastName</th>
                 <th>Phone</th>
-                {/* <th align="center">AddressLine1</th>
-                <th align="center">AddressLine2</th>
-                <th align="center">City</th>
-                <th align="center">State</th>
-                <th align="center">PostalCode</th>
-                <th align="center">Country</th>
-                <th align="center">SalesRep Employee Number</th>
-                <th align="center">Credit Limit</th> */}
               </tr>
             </thead>
-            <Fetch url="/customer">
+            <Fetch url="/customers">
               {data => {
                 return data.map(customer => (
                   <tbody>
@@ -50,30 +41,6 @@ class Catalogs extends React.Component {
                       <td>
                         {customer.phone}
                       </td>
-                      {/* <td>
-                        {customer.addressLine1}
-                      </td>
-                      <td>
-                        {customer.addressLine2}
-                      </td>
-                      <td>
-                        {customer.city}
-                      </td>
-                      <td>
-                        {customer.state}
-                      </td>
-                      <td>
-                        {customer.postalCode}
-                      </td>
-                      <td>
-                        {customer.country}
-                      </td>
-                      <td>
-                        {customer.salesRepEmployeeNumber}
-                      </td>
-                      <td>
-                        {customer.creditLimit}
-                      </td> */}
                       <td>
                         <Popup
                           trigger={<button> more </button>}

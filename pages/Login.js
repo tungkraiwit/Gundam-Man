@@ -1,10 +1,6 @@
 import React from 'react'
 import Axios from 'axios'
 import Router from 'next/router'
-import Layout from '../components/Layout'
-import Content from '../components/content'
-import MainMenu from '../components/MainMenu'
-import Product from './product'
 
 
 class LoginForm extends React.Component {
@@ -58,9 +54,10 @@ class LoginForm extends React.Component {
   async CheckLogin(Cemail, Cpassword) {
     // console.log("มาแล้ว")
     try {
-      await Axios.post('http://localhost:3001/users', {
+      await Axios.post('http://localhost:3001/login', {
         email: Cemail,
-        password: Cpassword
+        password: Cpassword,
+        type: 'Login'
       })
       Router.push({
         pathname: '/product'
