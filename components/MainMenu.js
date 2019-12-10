@@ -7,10 +7,22 @@ import Fetch from '../components/fetch'
 import Axios from 'axios'
 
 class MainMenu extends React.Component {
-  async profile() {
-    await Axios.get('http://localhost:3001/session', (req, res) => {
-      profile = res
-      console.log(profile)
+  constructor(props) {
+    super(props)
+    this.state = {
+      email: '',
+      employeeNumber: '',
+      officeCode: '',
+      jobTitle: ''
+    }
+  }
+  async componentDidMount() {
+    const eiei = await Axios.get('http://localhost:3001/session')
+    this.setState({
+      email: eiei.data.email,
+      employeeNumber: eiei.data.employeeNumber,
+      officeCode: eiei.data.officeCode,
+      jobTitle: eiei.data.jobTitle
     })
   }
   render() {
@@ -33,7 +45,7 @@ class MainMenu extends React.Component {
             <div className="columns" style={{ margin: "2rem" }}>
               <div className="column" style={{ color: 'white' }}>
                 <FontAwesomeIcon icon={faCircle} size="6x" />
-                <p className="is-size-5">{}</p>
+                <p className="is-size-5">{this.state.jobTitle}</p>
               </div>
             </div>
             <div className="columns">
