@@ -2,12 +2,10 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Content from '../components/content'
 import Fetch from '../components/fetch'
+import Popup from 'reactjs-popup'
 
-
-class Catalogs extends React.Component {
-  
-  render() {
-    
+class Catalogs extends React.Component {  
+  render() {    
     return (
       <div>
         <Layout>
@@ -56,7 +54,7 @@ class Catalogs extends React.Component {
                       </td>
                       <td>
                         <button>edit</button>
-                        </td> 
+                      </td>
                     </tr>
                   </tbody>
                 ))

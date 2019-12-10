@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Content from '../components/content'
 import Fetch from '../components/fetch'
-
+import Popup from 'reactjs-popup'
 
 class Catalogs extends React.Component {
   render() {
@@ -56,9 +56,34 @@ class Catalogs extends React.Component {
                       <td>
                         {product.MSRP}
                       </td>
-                      <td>
-                        <button>edit</button>
-                      </td>
+                      <Popup
+                          trigger={<button> more </button>}
+                          modal
+                        >
+                          {close => (
+                            <span>
+                              {/* <button
+                                  className="button is-pulled-right"
+                                  onClick={() => {close()}}
+                                >
+                                  x
+                                </button> */}
+                              <div style={{margin:"50px"}}>
+                                <p>productCode    : {product.productCode}</p>
+                                <p>productName      : {product.productName}</p>
+                                <p>productLine   : {product.productLine}</p>
+                                <p>productScale  : {product.productScale}</p>
+                                <p>productVendor             : {product.productVendor}</p>
+                                <p>productDescription      : {product.productDescription}</p>
+                                <p>quantityInStock      : {product.quantityInStock}</p>
+                                <p>buyPrice              : {product.buyPrice}</p>
+                                <p>MSRP             : {product.MSRP}</p>
+                                <p>textDescription             : {product.textDescription}</p>
+                              </div>
+                                <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px",marginLeft:"0px" ,background: "#F19671", color: "#FFFFFF" }} onClick={() => {close()}}>back</button>
+                            </span>
+                          )}
+                        </Popup>
                     </tr>
                     </tbody>
                   ))
