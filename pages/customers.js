@@ -4,6 +4,7 @@ import Content from '../components/content'
 import Fetch from '../components/fetch'
 import Popup from 'reactjs-popup'
 import FormMember from '../components/form-member'
+import Router from 'next/router'
 
 class Catalogs extends React.Component {
   constructor(props) {
@@ -13,8 +14,12 @@ class Catalogs extends React.Component {
   }
   closeModal() {
     this.setState({ open: false });
-  }  
-
+  }
+  onClick(customer){
+    Router.push({
+      pathname: '/edit'
+    })
+  }
   render() {
     return (
       <div>
@@ -90,7 +95,7 @@ class Catalogs extends React.Component {
                                 <p>creditLimit       : {customer.creditLimit}</p>
                               </div>
                                 <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px",marginLeft:"0px" ,background: "#F19671", color: "#FFFFFF" }} onClick={() => {close()}}>back</button>
-                                <button className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >edit</button> 
+                                {/* <button onClick={this.onClick} className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >edit</button>  */}
                             </span>
                           )}
                         </Popup>
