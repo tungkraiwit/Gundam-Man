@@ -87,6 +87,7 @@ class Catalogs extends React.Component {
                                 <p>PoatalCode        : {customer.postalCode}</p>
                                 <p>Country           : {customer.country}</p>
                                 <p>creditLimit       : {customer.creditLimit}</p>
+                                <p>checkNumber       : {customer.checkNumber}</p>
                               </div>
                                 <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px",marginLeft:"0px" ,background: "#F19671", color: "#FFFFFF" }} onClick={() => {close()}}>back</button>
                                 {/* <button onClick={this.onClick} className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >edit</button>  */}
@@ -94,6 +95,20 @@ class Catalogs extends React.Component {
                           )}
                         </Popup>
                       </td>
+                      <td>
+                        <Popup
+                        trigger={<button> edit</button>}
+                          modal>
+                          {close => (
+                            <span>
+                              <FormMember/>
+                                <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px",marginLeft:"0px" ,background: "#F19671", color: "#FFFFFF" }} onClick={() => {close()}}>save</button>
+                                <button className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >back</button> 
+                            </span> 
+                          )}
+                         </Popup>
+                      </td>
+                      
                     </tr>
                   </tbody>
                 ))
