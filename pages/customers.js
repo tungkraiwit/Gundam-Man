@@ -7,18 +7,27 @@ import FormMember from '../components/form-member'
 
 
 class Catalogs extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+    this.closeModal = this.closeModal.bind(this);
+  }
+  closeModal() {
+    this.setState({ open: false });
+  }  
+
   render() {
     return (
       <div>
         <Layout>
           <Content title="Customers" />
 
-          <div class="field has-addons" style={{marginTop:"0px",marginBottom:"0px",marginLeft:"100px"}}>
+          <div class="field has-addons" style={{ marginTop: "0px", marginBottom: "0px", marginLeft: "100px" }}>
             <div class="control">
               <input class="input" type="text" placeholder="Find a product " />
             </div>
             <div class="control">
-              <a class="button " style={{background:"#F19671",color:"#FFFFFF"}}>
+              <a class="button " style={{ background: "#F19671", color: "#FFFFFF" }}>
                 Search
               </a>
             </div>
@@ -90,9 +99,20 @@ class Catalogs extends React.Component {
                         <Popup
                           trigger={<button> more </button>}
                           modal
-                          closeOnDocumentClick >
-                          <FormMember />
-                          <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }}>Save Change</button>
+                        >
+                          {close => (
+                            <span>
+                              <button
+                                  className="button is-pulled-right"
+                                  onClick={() => {close()}}
+                                >
+                                  x
+                                </button>
+                              <FormMember />
+                                <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }}>Save Change</button>
+                                
+                            </span>
+                          )}
                         </Popup>
                       </td>
                     </tr>
