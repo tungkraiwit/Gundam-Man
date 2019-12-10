@@ -4,7 +4,6 @@ import Content from '../components/content'
 import Fetch from '../components/fetch'
 import Popup from 'reactjs-popup'
 import FormMember from '../components/form-member'
-import Router from 'next/router'
 
 class Catalogs extends React.Component {
   constructor(props) {
@@ -14,11 +13,6 @@ class Catalogs extends React.Component {
   }
   closeModal() {
     this.setState({ open: false });
-  }
-  onClick(customer){
-    Router.push({
-      pathname: '/edit'
-    })
   }
   render() {
     return (
@@ -53,16 +47,16 @@ class Catalogs extends React.Component {
                   <tbody>
                     <tr>
                       <td align="center">
-                        {customer.customerNumber}
+                        {customer.customer_number}
                       </td>
                       <td>
-                        {customer.customerName}
+                        {customer.customer_name}
                       </td>
                       <td>
-                        {customer.contactFirstName}
+                        {customer.contact_firstname}
                       </td>
                       <td>
-                        {customer.contactLastName}
+                        {customer.contact_lastname}
                       </td>
                       <td>
                         {customer.phone}
@@ -81,10 +75,10 @@ class Catalogs extends React.Component {
                                   x
                                 </button> */}
                               <div style={{margin:"50px"}}>
-                                <p>customerNumber    : {customer.customerNumber}</p>
-                                <p>customerName      : {customer.customerName}</p>
-                                <p>contactLastName   : {customer.contactLastName}</p>
-                                <p>contactFirstNmae  : {customer.contactFirstName}</p>
+                                <p>customerNumber    : {customer.customer_number}</p>
+                                <p>customerName      : {customer.customer_name}</p>
+                                <p>contactLastName   : {customer.contact_lastname}</p>
+                                <p>contactFirstNmae  : {customer.contact_firstname}</p>
                                 <p>Phone             : {customer.phone}</p>
                                 <p>AddressLine1      : {customer.addressLine1}</p>
                                 <p>AddressLine2      : {customer.addressLIne2}</p>
@@ -92,8 +86,8 @@ class Catalogs extends React.Component {
                                 <p>state             : {customer.state}</p>
                                 <p>PoatalCode        : {customer.postalCode}</p>
                                 <p>Country           : {customer.country}</p>
-                                <p>creditLimit       : {customer.creditLimit}</p>
-                                <p>checkNumber       : {customer.checkNumber}</p>
+                                <p>creditLimit       : {customer.creditlimit}</p>
+                                <p>checkNumber       : {customer.check_number}</p>
                               </div>
                                 <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px",marginLeft:"0px" ,background: "#F19671", color: "#FFFFFF" }} onClick={() => {close()}}>back</button>
                                 {/* <button onClick={this.onClick} className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >edit</button>  */}
