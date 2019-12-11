@@ -43,6 +43,7 @@ class FormOder extends React.Component {
   render() {
     return (
       <div className="content">
+        <h1>Order Products</h1>
         <div style={{ margin: "50px" }}>
           <div class="field is-horizontal">
             <div class="field-label is-normal">
@@ -59,12 +60,12 @@ class FormOder extends React.Component {
 
           <div class="field is-horizontal">
             <div class="field-label is-normal">
-              <label class="label">Product Name</label>
+              <label class="label">amount</label>
             </div>
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="Product Name" class="input" type="text" placeholder="Product Name" style={{ padding: "0.5rem" }} />
+                  <input onChange={this.onChange} name="amount" class="input" type="text" placeholder="Product Name" style={{ padding: "0.5rem" }} />
                 </p>
               </div>
             </div>
@@ -72,36 +73,36 @@ class FormOder extends React.Component {
 
           <div class="field is-horizontal">
             <div class="field-label is-normal">
-              <label class="label">Product Line</label>
+              <label class="label">required Date</label>
             </div>
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="Product Line" class="input" type="text" placeholder="Product Line" style={{ padding: "0.5rem" }} />
+                  <input onChange={this.onChange} name="required Date" class="input" type="date" placeholder="Product Line"  />
                 </p>
               </div>
             </div>
           </div>
           <div class="field is-horizontal">
             <div class="field-label is-normal">
-              <label class="label">Product Scale</label>
+              <label class="label">shiped Date</label>
             </div>
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="Product Scale" class="input" type="text" placeholder="Product Scale" style={{ padding: "0.5rem" }} />
+                  <input onChange={this.onChange} name="shiped Date" class="input" type="date" placeholder="shiped Date"  />
                 </p>
               </div>
             </div>
           </div>
           <div class="field is-horizontal">
             <div class="field-label is-normal">
-              <label class="label">Product Vendor</label>
+              <label class="label">Customer Code</label>
             </div>
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="Product Vendor" class="input" type="text" placeholder="Product Vendor" style={{ padding: "0.5rem" }} />
+                  <input onChange={this.onChange} name="Customer Code" class="input" type="text" placeholder="Product Vendor" style={{ padding: "0.5rem" }} />
                 </p>
               </div>
             </div>
@@ -114,51 +115,13 @@ class FormOder extends React.Component {
             <div class="field-body">
               <div class="field">
                 <div class="control">
-                  <textarea onChange={this.onChange} name="Product Description" class="textarea" placeholder="Product Description"></textarea>
+                  <textarea onChange={this.onChange} name="Product Description" class="text" placeholder="Product Description"></textarea>
                 </div>
               </div>
             </div>
           </div>          
-
-          <div class="field is-horizontal">
-            <div class="field-label is-normal">
-              <label class="label">quantity In Stock</label>
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="quantity In Stock" class="input" type="text" placeholder="quantity In Stock" style={{ padding: "0.5rem" }} />
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="field is-horizontal">
-            <div class="field-label is-normal">
-              <label class="label">buyPrice</label>
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="buyPrice" class="input" type="text" placeholder="buyPrice" style={{ padding: "0.5rem" }} />
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="field is-horizontal">
-            <div class="field-label is-normal">
-              <label class="label">MSRP</label>
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="MSRP" class="input" type="text" placeholder="MSRP" style={{ padding: "0.5rem" }} />
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-        <button onClick={this.onSubmit} className="button is-pulled-right is-rounded" style={{ marginRight: "50px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >Save Customer</button>
+        <button onClick={this.onSubmit} className="button is-pulled-right is-rounded" style={{ marginRight: "50px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >Save Order</button>
       </div>
     )
   }
