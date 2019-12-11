@@ -52,7 +52,7 @@ class FormMember extends React.Component {
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="Product name" class="input" type="text" placeholder="Product name" style={{ padding: "0.5rem" }} />
+                  <input onChange={this.onChange} name="ProductName" class="input" type="text" placeholder="Product name" style={{ padding: "0.5rem" }} />
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ class FormMember extends React.Component {
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="Product Scale" class="input" type="text" placeholder="number : number" style={{ padding: "0.5rem" }} />
+                  <input onChange={this.onChange} name="ProductScale" class="input" type="text" placeholder="number : number" style={{ padding: "0.5rem" }} />
                 </p>
               </div>
             </div>
@@ -75,7 +75,7 @@ class FormMember extends React.Component {
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="Product Line" class="input" type="text" placeholder="Product Line" style={{ padding: "0.5rem" }} />
+                  <input onChange={this.onChange} name="ProductLine" class="input" type="text" placeholder="Product Line" style={{ padding: "0.5rem" }} />
                 </p>
               </div>
             </div>
@@ -85,7 +85,7 @@ class FormMember extends React.Component {
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="Product Vendor" class="input" type="text" placeholder="Product Vendor" style={{ padding: "0.5rem" }} />
+                  <input onChange={this.onChange} name="ProductVendor" class="input" type="text" placeholder="Product Vendor" style={{ padding: "0.5rem" }} />
                 </p>
               </div>
             </div>
@@ -98,7 +98,7 @@ class FormMember extends React.Component {
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input onChange={this.onChange} name="quantity In Stock" class="input" type="text" placeholder="quantity In Stock" style={{ padding: "0.5rem" }} />
+                  <input onChange={this.onChange} name="quantityInStock" class="input" type="text" placeholder="quantity In Stock" style={{ padding: "0.5rem" }} />
                 </p>
               </div>
             </div>

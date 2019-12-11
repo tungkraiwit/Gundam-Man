@@ -3,14 +3,15 @@ import Layout from '../components/Layout'
 import Content from '../components/content'
 import Fetch from '../components/fetch'
 import Popup from 'reactjs-popup'
-import  FormEmployee from '../components/form-employee'
+import FormEmployee from '../components/form-employee'
 
-class Catalogs extends React.Component {  
-  render() {    
+class Catalogs extends React.Component {
+  render() {
     return (
       <div>
         <Layout>
           <Content title="Employees" />
+         
           <table className="table" style={{ margin: "100px", marginTop: "20px" }}>
             <thead>
               <tr>
@@ -36,7 +37,7 @@ class Catalogs extends React.Component {
                         {employees.first_name}
                       </td>
                       <td>
-                        {employees.lastName}
+                        {employees.last_name}
                       </td>
                       <td>
                         {employees.extension}
@@ -45,16 +46,16 @@ class Catalogs extends React.Component {
                         {employees.email}
                       </td>
                       <td align="center">
-                        {employees.officeCode}
+                        {employees.office_code}
                       </td>
                       <td>
-                        {employees.reportsTo}
+                        {employees.reports_to}
                       </td>
                       <td>
-                        {employees.jobTitle}
+                        {employees.job_title}
                       </td>
                       <td>
-                      <Popup
+                        <Popup
                           trigger={<button> edit</button>}
                           modal>
                           {close => (

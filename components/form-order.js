@@ -41,7 +41,7 @@ class FormOder extends React.Component {
   render() {
     return (
       <div className="content">
-        <h1>Order Products</h1>
+        <h1  class="label" align="center" style={{ color: "#f19571", fontSize: "25px",marginTop:"15px" }}>Order Products</h1>
         <div style={{ margin: "50px" }}>          
 
           <div class="field is-horizontal">
