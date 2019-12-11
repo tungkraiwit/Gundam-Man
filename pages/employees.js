@@ -29,10 +29,10 @@ class Catalogs extends React.Component {
                   <tbody>
                     <tr>
                       <td align="center">
-                        {employees.employeeNumber}
+                        {employees.employee_number}
                       </td>
                       <td>
-                        {employees.firstName}
+                        {employees.first_name}
                       </td>
                       <td>
                         {employees.lastName}
