@@ -21,9 +21,9 @@ class MainMenu extends React.Component {
     const eiei = await Axios.get('http://localhost:3001/session')
     this.setState({
       email: eiei.data.email,
-      employeeNumber: eiei.data.employeeNumber,
-      officeCode: eiei.data.officeCode,
-      jobTitle: eiei.data.jobTitle
+      employeeNumber: eiei.data.employee_number,
+      officeCode: eiei.data.office_code,
+      jobTitle: eiei.data.job_title
     })
   }
   render() {
