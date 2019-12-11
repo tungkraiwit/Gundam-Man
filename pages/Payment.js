@@ -39,6 +39,31 @@ class Order extends React.Component {
                 <th align="center">Customer Name</th>
                </tr>
               </thead>
+              <Fetch url="/customers/payment">
+                {data => {
+                  return data.map(payment => (
+                    <tbody>
+                    <tr>
+                      <td>
+                        {payment.customer_name}
+                      </td>
+                      <td>
+                        {payment.contact_firstname}
+                      </td>
+                      <td>
+                        {payment.contact_lastname}
+                      </td>
+                      <td>
+                        {payment.addressLine1}
+                      </td>
+                      <td>
+                        {payment.amount}
+                      </td>                   
+                    </tr>
+                    </tbody>
+                  ))
+                }}
+              </Fetch>
           </table>
         </Layout>
       </div>

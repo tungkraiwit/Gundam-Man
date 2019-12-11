@@ -16,15 +16,15 @@ class MainMenu extends React.Component {
       jobTitle: ''
     }
   }
-  // async componentDidMount() {
-  //   const eiei = await Axios.get('http://10.10.186.195:3001/session')
-  //   this.setState({
-  //     email: eiei.data.email,
-  //     employeeNumber: eiei.data.employee_number,
-  //     officeCode: eiei.data.office_code,
-  //     jobTitle: eiei.data.job_title
-  //   })
-  // }
+  async componentDidMount() {
+    const eiei = await Axios.get('http://10.10.186.195:3001/session')
+    this.setState({
+      email: eiei.data.email,
+      employeeNumber: eiei.data.employee_number,
+      officeCode: eiei.data.office_code,
+      jobTitle: eiei.data.job_title
+    })
+  }
   render() {
     const MainMenuButton = ({ title, active, url }) => (
       <div className="columns">
@@ -45,6 +45,7 @@ class MainMenu extends React.Component {
             <MainMenuButton title="Customers" url="/customers" />
             <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
+            <MainMenuButton title="Payment" url="/Payment" />
           </div>)
       }
       else if (jobtitle === "VP Sales") {
@@ -52,8 +53,8 @@ class MainMenu extends React.Component {
           <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
-            <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
+            <MainMenuButton title="Payment" url="/Payment" />
           </div>)
       }
       else if (jobtitle === "VP Marketing") {
@@ -61,8 +62,8 @@ class MainMenu extends React.Component {
           <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
-            <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
+            <MainMenuButton title="Payment" url="/Payment" />
           </div>)
       }
       else if (jobtitle === "Sales Manager (APAC)") {
@@ -70,8 +71,8 @@ class MainMenu extends React.Component {
           <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
-            <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
+            <MainMenuButton title="Payment" url="/Payment" />
           </div>)
       }
       else if (jobtitle === "Sale Manager (EMEA)") {
@@ -79,8 +80,8 @@ class MainMenu extends React.Component {
           <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
-            <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
+            <MainMenuButton title="Payment" url="/Payment" />
           </div>)
       }
       else if (jobtitle === "Sales Manager (NA)") {
@@ -88,8 +89,8 @@ class MainMenu extends React.Component {
           <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
-            <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
+            <MainMenuButton title="Payment" url="/Payment" />
           </div>)
       }
       else {

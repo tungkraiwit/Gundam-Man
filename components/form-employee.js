@@ -4,6 +4,7 @@ class FormEmployee extends React.Component {
   render (){
     return (
       <div className="content">
+        <h1  class="label" align="center" style={{ color: "#f19571", fontSize: "25px", marginTop: "15px" }}>Add Employees</h1>
         <div style={{ margin: "50px" }}>
           <div class="field is-horizontal">
             <div class="field-label is-normal">
@@ -91,7 +92,7 @@ class FormEmployee extends React.Component {
               </div>
             </div>
           </div>
-          <div class="field is-horizontal">
+          {/* <div class="field is-horizontal">
             <div class="field-label is-normal">
               <label class="label">job title</label>
             </div>
@@ -102,7 +103,29 @@ class FormEmployee extends React.Component {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
+          <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">job title</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select>
+                                            <option>Sales Rep</option>
+                                            <option>Sales Manager (NA)</option>
+                                            <option>Sale Manager (EMEA)</option>
+                                            <option>Sales Manager (APAC)</option>
+                                            <option>VP Marketing</option>
+                                            <option>VP Sales</option>
+                                            <option>President</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
         </div>
         <button onClick={this.onSubmit} className="button is-pulled-right is-rounded" style={{ marginRight: "50px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >Save</button>

@@ -15,7 +15,8 @@ class FormOder extends React.Component {
       PriceEach: '',
       CustomerName: '',
       Comment: '',
-      employee_number: ''
+      employee_number: '',
+      message:''
     }
   }
   async componentDidMount() {
@@ -30,12 +31,26 @@ class FormOder extends React.Component {
       [name]: value
     })
   }
-  
-  onSubmit = e => {
-    Api.post(`${this.props.AddNew}`, {
-      data: this.state
-    })
-    // console.log(this.props.AddNew)
+
+  onSubmit = e =>{
+    // e.preventDefault()
+    this.Oncheck()    
+  }
+  async Oncheck(){
+    try{
+      await Api.post(`${this.props.AddNew}`, {
+        data: this.state
+      })
+      console.log("Success")
+      this.setState({
+        message: 'Success'
+      }) 
+    } catch {
+      console.log("fail")
+      this.setState({
+        message: 'Fail'
+      })  
+    }
   }
 
   render() {
