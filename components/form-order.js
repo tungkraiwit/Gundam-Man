@@ -41,8 +41,22 @@ class FormOder extends React.Component {
   render() {
     return (
       <div className="content">
-        <h1 class="label" align="center" style={{ color: "#f19571", fontSize: "25px",marginTop:"15px" }}>Order Products</h1>
-        <div style={{ margin: "50px" }}>
+        <h1>Order Products</h1>
+        <div style={{ margin: "50px" }}>          
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Order Date</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input onChange={this.onChange} name="OrderDate" class="input" type="date" placeholder="Order Date" />
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div class="field is-horizontal">
             <div class="field-label is-normal">
               <label class="label">Required Date</label>

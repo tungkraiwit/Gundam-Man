@@ -98,6 +98,7 @@ class MainMenu extends React.Component {
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
             <MainMenuButton title="Order" url="/order" />
+            <MainMenuButton title="Payment" url="/Payment" />
           </div>)
       }
 
