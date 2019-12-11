@@ -14,12 +14,13 @@ class Order extends React.Component {
             <thead>
               <tr>
                 <th align="center">Order Number</th>
-                <th align="center">ProductCode</th>
-                <th align="center">Quantity Ordered</th>
-                <th align="center">PriceEach</th>
+                <th align="center">Order Date</th>
+                <th align="center">Required Date</th>
+                <th align="center">Shipped Date</th>
                 <th align="center">status</th>
-                <th align="center">Comments</th>
-                <th align="center">Comments</th>
+                <th align="center">Quantity Ordered</th>
+                <th align="center">Price Each</th>
+                <th align="center">Customer Name</th>
                </tr>
               </thead>
               <Fetch url="/orders">
@@ -28,11 +29,32 @@ class Order extends React.Component {
                     <tbody>
                     <tr>
                       <td>
-                        {orders.orderNumber}
+                        {orders.order_number}
                       </td>
                       <td>
-                        <button>edit</button>
+                        {orders.order_date}
                       </td>
+                      <td>
+                        {orders.required_date}
+                      </td>
+                      <td>
+                        {orders.shipped_date}
+                      </td>
+                      <td>
+                        {orders.status}
+                      </td>
+                      <td align="center">
+                        {orders.quantity_ordered}
+                      </td>
+                      <td>
+                        {orders.price_each}
+                      </td>
+                      <td>
+                        {orders.customer_name}
+                      </td>
+                      {/* <td>
+                        <button>edit</button>
+                      </td> */}
                     </tr>
                     </tbody>
                   ))
