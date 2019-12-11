@@ -86,30 +86,39 @@ class Catalogs extends React.Component {
                         <Popup
                           trigger={<button> more </button>}
                           modal
+                          on="focus"
+
                         >
                           {close => (
                             <span>
-                              {/* <button
+                              <button
                                   className="button is-pulled-right"
                                   onClick={() => {close()}}
                                 >
                                   x
-                                </button> */}
-                              <div style={{ margin: "50px" }}>
-                                <p>customerNumber    : {customer.customer_number}</p>
-                                <p>customerName      : {customer.customer_name}</p>
-                                <p>contactLastName   : {customer.contact_lastname}</p>
-                                <p>contactFirstNmae  : {customer.contact_firstname}</p>
-                                <p>Phone             : {customer.phone}</p>
-                                <p>AddressLine1      : {customer.addressLine1}</p>
-                                <p>AddressLine2      : {customer.addressLIne2}</p>
-                                <p>city              : {customer.city}</p>
-                                <p>state             : {customer.state}</p>
-                                <p>PoatalCode        : {customer.postalCode}</p>
-                                <p>Country           : {customer.country}</p>
-                                <p>creditLimit       : {customer.creditlimit}</p>
-                                <p>checkNumber       : {customer.check_number}</p>
+                                </button> 
+                              <div>
+                               <h2 class="label"  align="center" style ={{color: "#f19571", fontSize:"25px"}}>more Information</h2>
+                                <div class="columns">
+                                <div class="column" style={{marginLeft:"80px"}}>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>customerNumber    :</strong>{customer.customer_number}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>customerName      : </strong>{customer.customer_name}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>contactLastName   : </strong>{customer.contact_lastname}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>contactFirstNmae  : </strong>{customer.contact_firstname}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>Phone             : </strong>{customer.phone}</p>
+                                </div>
+                                <div class="column">
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>AddressLine1      : </strong>{customer.addressLine1}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>AddressLine2      : </strong>{customer.addressLIne2}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>city              : </strong>{customer.city}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>state             : </strong>{customer.state}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>PoatalCode        : </strong>{customer.postalCode}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>Country           : </strong>{customer.country}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>creditLimit       : </strong>{customer.creditlimit}</p>
+                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>checkNumber       : </strong>{customer.check_number}</p>
+                                </div>
                               </div>
+                              </div> 
                               <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px", marginLeft: "0px", background: "#F19671", color: "#FFFFFF" }} onClick={() => { close() }}>back</button>
                               {/* <button onClick={this.onClick} className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >edit</button>  */}
                             </span>

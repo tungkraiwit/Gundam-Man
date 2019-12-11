@@ -17,8 +17,7 @@ class MainMenu extends React.Component {
     }
   }
   async componentDidMount() {
-    // preventDefault() 
-    const eiei = await Axios.get('http://localhost:3001/session')
+    const eiei = await Axios.get('http://10.10.186.195:3001/session')
     this.setState({
       email: eiei.data.email,
       employeeNumber: eiei.data.employeeNumber,
