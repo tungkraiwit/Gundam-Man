@@ -19,7 +19,7 @@ class Catalogs extends React.Component {
     console.log(this.state.AddNew)
     
   }
-  render() {
+  render (){
     return (
       <div>
         <Layout>
@@ -148,8 +148,9 @@ class Catalogs extends React.Component {
         </Layout>
       </div >
     )
-  }
-}
+  }}
+
+
 
 
 export default Catalogs

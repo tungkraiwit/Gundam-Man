@@ -40,7 +40,7 @@ class MainMenu extends React.Component {
     const ShowManu = ({ jobtitle }) => {
       if (jobtitle === "President") {
         return (
-          <div className="column" onClick={this.onRefresh}>
+          <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
             <MainMenuButton title="Employee" url="/employees" />
@@ -49,7 +49,7 @@ class MainMenu extends React.Component {
       }
       else if (jobtitle === "VP Sales") {
         return (
-          <div className="column" onClick={this.onRefresh}>
+          <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
             <MainMenuButton title="Employee" url="/employees" />
@@ -58,7 +58,7 @@ class MainMenu extends React.Component {
       }
       else if (jobtitle === "VP Marketing") {
         return (
-          <div className="column" onClick={this.onRefresh}>
+          <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
             <MainMenuButton title="Employee" url="/employees" />
@@ -67,7 +67,7 @@ class MainMenu extends React.Component {
       }
       else if (jobtitle === "Sales Manager (APAC)") {
         return (
-          <div className="column" onClick={this.onRefresh}>
+          <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
             <MainMenuButton title="Employee" url="/employees" />
@@ -76,7 +76,7 @@ class MainMenu extends React.Component {
       }
       else if (jobtitle === "Sale Manager (EMEA)") {
         return (
-          <div className="column" onClick={this.onRefresh}>
+          <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
             <MainMenuButton title="Employee" url="/employees" />
@@ -85,7 +85,7 @@ class MainMenu extends React.Component {
       }
       else if (jobtitle === "Sales Manager (NA)") {
         return (
-          <div className="column" onClick={this.onRefresh}>
+          <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
             <MainMenuButton title="Employee" url="/employees" />
@@ -94,7 +94,7 @@ class MainMenu extends React.Component {
       }
       else {
         return (
-          <div className="column" onClick={this.onRefresh}>
+          <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
             <MainMenuButton title="Order" url="/order" />
