@@ -122,18 +122,18 @@ const Catalogs = () => {
                           <h1 class="label" align="center" style={{ color: "#f19571", fontSize: "25px" }}>more information</h1>
                           <div class="columns" style={{ marginLeft: "80px", marginRight: "80px" }}>
                             <div class="column">
-                              <p style={{ margin: "10px", fontSize: "15px", color: "#f5b59d" }}><strong style={{ color: "#f19571" }}>productCode        : </strong>{product.product_code}</p>
-                              <p style={{ margin: "10px", fontSize: "15px", color: "#f5b59d" }}><strong style={{ color: "#f19571" }}>productName        :</strong>{product.product_name}</p>
-                              <p style={{ margin: "10px", fontSize: "15px", color: "#f5b59d" }}><strong style={{ color: "#f19571" }}>productLine        :</strong> {product.product_line}</p>
-                              <p style={{ margin: "10px", fontSize: "15px", color: "#f5b59d" }}><strong style={{ color: "#f19571" }}>productScale       :</strong> {product.product_scale}</p>
-                              <p style={{ margin: "10px", fontSize: "15px", color: "#f5b59d" }}><strong style={{ color: "#f19571" }}>productVendor      :</strong> {product.product_vendor}</p>
-                              <p style={{ margin: "10px", fontSize: "15px", color: "#f5b59d" }}><strong style={{ color: "#f19571" }}>productDescription :</strong> {product.product_description}</p>
-                              <p style={{ margin: "10px", fontSize: "15px", color: "#f5b59d" }}><strong style={{ color: "#f19571" }}>quantityInStock    :</strong> {product.quantity_instock}</p>
-                              <p style={{ margin: "10px", fontSize: "15px", color: "#f5b59d" }}><strong style={{ color: "#f19571" }}>buyPrice           :</strong> {product.buy_price}</p>
-                              <p style={{ margin: "10px", fontSize: "15px", color: "#f5b59d" }}><strong style={{ color: "#f19571" }}>MSRP               :</strong> {product.msrp}</p>
+                              <p style={{ margin: "10px", fontSize: "15px"}}><strong >productCode        : </strong>{product.product_code}</p>
+                              <p style={{ margin: "10px", fontSize: "15px" }}><strong >productName        :</strong>{product.product_name}</p>
+                              <p style={{ margin: "10px", fontSize: "15px" }}><strong >productLine        :</strong> {product.product_line}</p>
+                              <p style={{ margin: "10px", fontSize: "15px" }}><strong >productScale       :</strong> {product.product_scale}</p>
+                              <p style={{ margin: "10px", fontSize: "15px" }}><strong >productVendor      :</strong> {product.product_vendor}</p>
+                              <p style={{ margin: "10px", fontSize: "15px" }}><strong >productDescription :</strong> {product.product_description}</p>
+                              <p style={{ margin: "10px", fontSize: "15px" }}><strong >quantityInStock    :</strong> {product.quantity_instock}</p>
+                              <p style={{ margin: "10px", fontSize: "15px" }}><strong >buyPrice           :</strong> {product.buy_price}</p>
+                              <p style={{ margin: "10px", fontSize: "15px" }}><strong >MSRP               :</strong> {product.msrp}</p>
                             </div>
                             <div class="column">
-                              <p style={{ margin: "10px", fontSize: "15px", color: "#f5b59d" }}><strong style={{ color: "#f19571" }}>textDescription    : </strong>{product.text_description}</p>
+                              <p style={{ margin: "10px", fontSize: "15px" }}><strong>textDescription    : </strong>{product.text_description}</p>
                             </div>
 
                           </div>

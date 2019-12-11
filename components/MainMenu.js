@@ -16,15 +16,15 @@ class MainMenu extends React.Component {
       jobTitle: ''
     }
   }
-  async componentDidMount() {
-    const eiei = await Axios.get('http://10.10.186.195:3001/session')
-    this.setState({
-      email: eiei.data.email,
-      employeeNumber: eiei.data.employee_number,
-      officeCode: eiei.data.office_code,
-      jobTitle: eiei.data.job_title
-    })
-  }
+  // async componentDidMount() {
+  //   const eiei = await Axios.get('http://10.10.186.195:3001/session')
+  //   this.setState({
+  //     email: eiei.data.email,
+  //     employeeNumber: eiei.data.employee_number,
+  //     officeCode: eiei.data.office_code,
+  //     jobTitle: eiei.data.job_title
+  //   })
+  // }
   render() {
     const MainMenuButton = ({ title, active, url }) => (
       <div className="columns">

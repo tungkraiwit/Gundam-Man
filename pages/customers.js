@@ -19,7 +19,7 @@ class Catalogs extends React.Component {
     console.log(this.state.AddNew)
     
   }
-  render (){
+  render() {
     return (
       <div>
         <Layout>
@@ -101,21 +101,21 @@ class Catalogs extends React.Component {
                                <h2 class="label"  align="center" style ={{color: "#f19571", fontSize:"25px"}}>more Information</h2>
                                 <div class="columns">
                                 <div class="column" style={{marginLeft:"80px"}}>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>customerNumber    :</strong>{customer.customer_number}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>customerName      : </strong>{customer.customer_name}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>contactLastName   : </strong>{customer.contact_lastname}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>contactFirstNmae  : </strong>{customer.contact_firstname}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>Phone             : </strong>{customer.phone}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >customerNumber    :</strong>{customer.customer_number}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >customerName      : </strong>{customer.customer_name}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >contactLastName   : </strong>{customer.contact_lastname}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >contactFirstNmae  : </strong>{customer.contact_firstname}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >Phone             : </strong>{customer.phone}</p>
                                 </div>
                                 <div class="column">
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>AddressLine1      : </strong>{customer.addressLine1}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>AddressLine2      : </strong>{customer.addressLIne2}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>city              : </strong>{customer.city}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>state             : </strong>{customer.state}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>PoatalCode        : </strong>{customer.postalCode}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>Country           : </strong>{customer.country}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>creditLimit       : </strong>{customer.creditlimit}</p>
-                                <p style={{margin:"10px",fontSize:"15px",color:"#f5b59d"}}><strong style={{color: "#f19571"}}>checkNumber       : </strong>{customer.check_number}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >AddressLine1      : </strong>{customer.addressLine1}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >AddressLine2      : </strong>{customer.addressLIne2}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >city              : </strong>{customer.city}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >state             : </strong>{customer.state}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >PoatalCode        : </strong>{customer.postalCode}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >Country           : </strong>{customer.country}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >creditLimit       : </strong>{customer.creditlimit}</p>
+                                <p style={{margin:"10px",fontSize:"15px"}}><strong >checkNumber       : </strong>{customer.check_number}</p>
                                 </div>
                               </div>
                               </div> 
@@ -148,9 +148,8 @@ class Catalogs extends React.Component {
         </Layout>
       </div >
     )
-  }}
-
-
+  }
+}
 
 
 export default Catalogs
