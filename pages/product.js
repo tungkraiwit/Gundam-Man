@@ -4,6 +4,7 @@ import Content from '../components/content'
 import ScaleBar from '../components/scale-bar'
 import Api from '../api'
 import Popup from 'reactjs-popup'
+import FormProduct from '../components/form-product'
 
 const Catalogs = () => {
   const [vendor, setVendor] = useState(undefined)
@@ -19,6 +20,21 @@ const Catalogs = () => {
     <div>
       <Layout>
         <Content title="Product" />
+        <div class="field has-addons" style={{ marginTop: "0px", marginBottom: "0px", marginLeft: "100px" }}>
+            <div class="control">
+              <Popup
+                trigger={<a class="button " style={{ background: "#F19671", color: "#FFFFFF" }}>ADD</a>}
+                modal>
+                {close => (
+                  <span>
+                    <FormProduct AddNew="products"/>
+                    <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px", marginLeft: "0px", background: "#F19671", color: "#FFFFFF" }} onClick={() => { close() }}>Cancel</button>
+                    {/* <button onClick={this.onSubmit} className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >Save Customer</button> */}
+                  </span>
+                )}
+              </Popup>
+            </div>
+          </div>
         <ScaleBar
           onChange={(vendor, scale) => {
             setVendor(vendor)
