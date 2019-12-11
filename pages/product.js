@@ -49,7 +49,7 @@ const Catalogs = () => {
               <th align="center">Product Line</th>
               <th align="center">Product Scale</th>
               <th align="center">Product Vendor</th>
-              <th align="center">Product Description</th>
+              {/* <th align="center">Product Description</th> */}
               <th align="center">quantity In Stock</th>
               <th align="center">buyPrice</th>
               <th align="center">MSRP</th>
@@ -83,9 +83,9 @@ const Catalogs = () => {
                     <td>
                       {product.product_vendor}
                     </td>
-                    <td>
+                    {/* <td>
                       {product.product_description}
-                    </td>
+                    </td> */}
                     <td>
                       {product.quantity_instock}
                     </td>

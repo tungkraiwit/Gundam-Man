@@ -17,7 +17,8 @@ class FormMember extends React.Component {
       postalcode: '',
       country: '',
       salesrepemployeeNumber: '',
-      creditLimit: ''
+      creditLimit: '',
+      message:''
     }
   }
   async componentDidMount() {
@@ -32,12 +33,25 @@ class FormMember extends React.Component {
       [name]: value
     })
   }
-  onSubmit = e => {
+  onSubmit = e =>{
     // e.preventDefault()
-    Api.post(`${this.props.AddNew}`, {
-      data: this.state
-    })
-    // console.log(this.props.AddNew)
+    this.Oncheck()    
+  }
+  async Oncheck(){
+    try{
+      await Api.post(`${this.props.AddNew}`, {
+        data: this.state
+      })
+      console.log("Success")
+      this.setState({
+        message: 'Success'
+      }) 
+    } catch {
+      console.log("fail")
+      this.setState({
+        message: 'Fail'
+      })  
+    }
   }
 
   render() {
@@ -45,6 +59,7 @@ class FormMember extends React.Component {
       <div className="content">
 
         <div style={{ margin: "50px" }}>
+        <p style={{ color: "#FF0000"}}>{this.state.message}</p>
 
           <div class="field is-horizontal">
             <div class="field-label is-normal">
