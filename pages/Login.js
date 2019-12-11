@@ -1,7 +1,7 @@
 import React from 'react'
 import Axios from 'axios'
 import Router from 'next/router'
-
+import bcrypt from 'bcryptjs'
 
 class LoginForm extends React.Component {
   state = { profile: [{}] }
@@ -46,13 +46,14 @@ class LoginForm extends React.Component {
       })
     }
     else {
-      // console.log(user.email+"----------"+user.password)
-      // console.log("click แล้ว ")
-      this.CheckLogin(user.email, user.password)
+      const salt = bcrypt.genSaltSync(10);
+      const hash = bcrypt.hashSync(user.password, salt);
+      this.CheckLogin(user.email, hash)
     }
   }
   async CheckLogin(Cemail, Cpassword) {
     // console.log("มาแล้ว")
+    console.log(Cpassword)
     try {
       await Axios.post('http://localhost:3001/login', {
         email: Cemail,
