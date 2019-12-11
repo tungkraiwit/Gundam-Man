@@ -7,6 +7,19 @@ import FormOrder from '../components/form-order'
 
 
 class Order extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { open: false , AddNew: null};
+    this.closeModal = this.closeModal.bind(this);
+  }
+  closeModal() {
+    this.setState({ open: false });
+  }
+  onSubmit = e =>{
+    e.preventDefault()
+    console.log(this.state.AddNew)
+    
+  }
   render() {
     return (
       <div>
@@ -70,10 +83,7 @@ class Order extends React.Component {
                       </td>
                       <td>
                         {orders.customer_name}
-                      </td>
-                      {/* <td>
-                        <button>edit</button>
-                      </td> */}
+                      </td>                      
                     </tr>
                     </tbody>
                   ))
