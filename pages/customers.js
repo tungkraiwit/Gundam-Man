@@ -96,7 +96,6 @@ class Catalogs extends React.Component {
                                   onClick={() => {close()}}
                                 >
                                   x
-<<<<<<< HEAD
                                 </button> 
                               <div>
                                <h2 class="label"  align="center" style ={{color: "#f19571", fontSize:"25px"}}>more Information</h2>
@@ -120,24 +119,6 @@ class Catalogs extends React.Component {
                                 </div>
                               </div>
                               </div> 
-=======
-                                </button> */}
-                              <div style={{ margin: "50px" }}>
-                                <p>customerNumber    : {customer.customer_number}</p>
-                                <p>customerName      : {customer.customer_name}</p>
-                                <p>contactLastName   : {customer.contact_lastname}</p>
-                                <p>contactFirstNmae  : {customer.contact_firstname}</p>
-                                <p>Phone             : {customer.phone}</p>
-                                <p>AddressLine1      : {customer.addressLine1}</p>
-                                <p>AddressLine2      : {customer.addressLIne2}</p>
-                                <p>city              : {customer.city}</p>
-                                <p>state             : {customer.state}</p>
-                                <p>PoatalCode        : {customer.postalCode}</p>
-                                <p>Country           : {customer.country}</p>
-                                <p>creditLimit       : {customer.creditlimit}</p>
-                                <p>checkNumber       : {customer.check_number}</p>
-                              </div>
->>>>>>> 315420ad3ed0530ff41cea3be67ae107f660be22
                               <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px", marginLeft: "0px", background: "#F19671", color: "#FFFFFF" }} onClick={() => { close() }}>back</button>
                               {/* <button onClick={this.onClick} className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >edit</button>  */}
                             </span>

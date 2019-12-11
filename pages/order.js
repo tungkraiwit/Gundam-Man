@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Content from '../components/content'
 import Fetch from '../components/fetch'
+import Popup from 'reactjs-popup'
+import FormOrder from '../components/form-order'
 
 
 class Order extends React.Component {
@@ -10,6 +12,23 @@ class Order extends React.Component {
       <div>
         <Layout>
           <Content title="Order" />
+
+          <div class="field has-addons" style={{ marginTop: "0px", marginBottom: "0px", marginLeft: "100px" }}>
+            <div class="control">
+              <Popup
+                trigger={<a class="button " style={{ background: "#F19671", color: "#FFFFFF" }}>ADD</a>}
+                modal>
+                {close => (
+                  <span>
+                    <FormOrder AddNew="orders"/>
+                    <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px", marginLeft: "0px", background: "#F19671", color: "#FFFFFF" }} onClick={() => { close() }}>Cancel</button>
+                    {/* <button onClick={this.onSubmit} className="button is-pulled-right is-rounded" style={{ marginRight: "5px", marginTop: "0px", background: "#F19671", color: "#FFFFFF" }} >Save Customer</button> */}
+                  </span>
+                )}
+              </Popup>
+            </div>
+          </div>
+
           <table className="table" style={{margin:"70px",marginTop:"0px"}}>
             <thead>
               <tr>
