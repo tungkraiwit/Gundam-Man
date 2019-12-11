@@ -13,11 +13,11 @@ const ScaleBar = ({ onChange }) => {
 
   useEffect(async () => {
     const { data } = await Api.get('/products/vendor')
-    setVendors(data)
+    setVendors([null, ...data])
   }, []);
   useEffect(async () => {
     const { data } = await Api.get('/products/scale')
-    setScales(data)
+    setScales([null, ...data])
   }, []);
   // send value out
   useEffect(() => {

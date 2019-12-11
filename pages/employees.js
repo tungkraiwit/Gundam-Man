@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import Content from '../components/content'
 import Fetch from '../components/fetch'
 import Popup from 'reactjs-popup'
+import  FormEmployee from '../components/form-employee'
 
 class Catalogs extends React.Component {  
   render() {    
@@ -53,7 +54,16 @@ class Catalogs extends React.Component {
                         {employees.jobTitle}
                       </td>
                       <td>
-                        <button>edit</button>
+                      <Popup
+                          trigger={<button> edit</button>}
+                          modal>
+                          {close => (
+                            <span>
+                              <FormEmployee />
+                              <button className="button is-pulled-right is-rounded" style={{ margin: "50px", marginTop: "0px", marginLeft: "0px", background: "#F19671", color: "#FFFFFF" }} onClick={() => { close() }}>back</button>
+                            </span>
+                          )}
+                        </Popup>
                       </td>
                     </tr>
                   </tbody>
