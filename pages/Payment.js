@@ -9,16 +9,16 @@ import FormOrder from '../components/form-order'
 class Order extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { open: false , AddNew: null};
+    this.state = { open: false, AddNew: null };
     this.closeModal = this.closeModal.bind(this);
   }
   closeModal() {
     this.setState({ open: false });
   }
-  onSubmit = e =>{
+  onSubmit = e => {
     e.preventDefault()
     console.log(this.state.AddNew)
-    
+
   }
   render() {
     return (
@@ -26,44 +26,49 @@ class Order extends React.Component {
         <Layout>
           <Content title="Payment" />
 
-          <table className="table" style={{margin:"70px",marginTop:"0px"}}>
+          <table className="table" style={{ margin: "70px", marginTop: "0px" }}>
             <thead>
               <tr>
                 <th align="center">Order Number</th>
+                <th align="center">Customer Name</th>
+                <th align="center">Check Number</th>
                 <th align="center">Order Date</th>
                 <th align="center">Required Date</th>
                 <th align="center">Shipped Date</th>
-                <th align="center">status</th>
-                <th align="center">Quantity Ordered</th>
-                <th align="center">Price Each</th>
-                <th align="center">Customer Name</th>
-               </tr>
-              </thead>
-              <Fetch url="/customers/payment">
-                {data => {
-                  return data.map(payment => (
-                    <tbody>
+                <th align="center">Amount</th>
+              </tr>
+            </thead>
+            <Fetch url="/customers/payment">
+              {data => {
+                return data.map(payment => (
+                  <tbody>
                     <tr>
+                      <td>
+                        {payment.order_number}
+                      </td>
                       <td>
                         {payment.customer_name}
                       </td>
                       <td>
-                        {payment.contact_firstname}
+                        {payment.check_number}
                       </td>
                       <td>
-                        {payment.contact_lastname}
+                        {payment.order_date}
                       </td>
                       <td>
-                        {payment.addressLine1}
+                        {payment.required_date}
+                      </td>
+                      <td>
+                        {payment.shipped_date}
                       </td>
                       <td>
                         {payment.amount}
-                      </td>                   
+                      </td>
                     </tr>
-                    </tbody>
-                  ))
-                }}
-              </Fetch>
+                  </tbody>
+                ))
+              }}
+            </Fetch>
           </table>
         </Layout>
       </div>

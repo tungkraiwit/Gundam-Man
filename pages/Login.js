@@ -9,7 +9,7 @@ class LoginForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      email: null,
+      employeenumber: null,
       password: null,
       currentUser: null,
       message: ''
@@ -26,15 +26,15 @@ class LoginForm extends React.Component {
   onSubmit = e => {
     e.preventDefault()
     const user = {
-      email: this.state.email,
+      employeenumber: this.state.employeenumber,
       password: this.state.password,
       currentUser: this.state.currentUser
     }
-    if (user.email === null) {
+    if (user.employeenumber === null) {
       return this.setState({
-        email: null,
+        employeenumber: null,
         password: null,
-        message: 'Email',
+        message: 'employee number',
         currentUser: false
       })
     }
@@ -48,15 +48,15 @@ class LoginForm extends React.Component {
     else {
       const salt = bcrypt.genSaltSync(10);
       const hash = bcrypt.hashSync(user.password, salt);
-      this.CheckLogin(user.email, hash)
+      this.CheckLogin(user.employeenumber, hash)
     }
   }
-  async CheckLogin(Cemail, Cpassword) {
+  async CheckLogin(Cemployeenumber, Cpassword) {
     // console.log("มาแล้ว")
     console.log(Cpassword)
     try {
       await Axios.post('http://localhost:3001/login', {
-        email: Cemail,
+        employeenumber: Cemployeenumber,
         password: Cpassword,
         type: 'Login'
       })
@@ -81,13 +81,13 @@ class LoginForm extends React.Component {
           <p class="has-text-centered" style={{ color: "#FF0000" }}>{message}</p>
           <form onSubmit={this.onSubmit}>
             <div className="field">
-              <label className="label" >User Name</label>
+              <label className="label" >Employee number</label>
               <div className="control" >
                 <input
                   className="input"
-                  type="email"
-                  name="email"
-                  placeholder="email@example.com"
+                  type="text"
+                  name="employeenumber"
+                  placeholder="Employee number"
                   onChange={this.onChange}
                 />
               </div>

@@ -37,9 +37,11 @@ class FormOder extends React.Component {
     this.Oncheck()    
   }
   async Oncheck(){
+    // console.log("455545")
     try{
       await Api.post(`${this.props.AddNew}`, {
-        data: this.state
+        data: this.state,
+        type: 'ADD'
       })
       console.log("Success")
       this.setState({
@@ -57,7 +59,8 @@ class FormOder extends React.Component {
     return (
       <div className="content">
         <h1  class="label" align="center" style={{ color: "#f19571", fontSize: "25px",marginTop:"15px" }}>Order Products</h1>
-        <div style={{ margin: "50px" }}>          
+        <div style={{ margin: "50px" }}>        
+        <p style={{ color: "#FF0000"}}>{this.state.message}</p>  
 
           <div class="field is-horizontal">
             <div class="field-label is-normal">

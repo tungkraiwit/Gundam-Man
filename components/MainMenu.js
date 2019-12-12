@@ -53,6 +53,7 @@ class MainMenu extends React.Component {
           <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
+            <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
             <MainMenuButton title="Payment" url="/Payment" />
           </div>)
@@ -62,8 +63,10 @@ class MainMenu extends React.Component {
           <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
+            <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
             <MainMenuButton title="Payment" url="/Payment" />
+            <MainMenuButton title="promotion" url="/promotion" />
           </div>)
       }
       else if (jobtitle === "Sales Manager (APAC)") {
@@ -71,6 +74,7 @@ class MainMenu extends React.Component {
           <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
+            <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
             <MainMenuButton title="Payment" url="/Payment" />
           </div>)
@@ -80,6 +84,7 @@ class MainMenu extends React.Component {
           <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
+            <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
             <MainMenuButton title="Payment" url="/Payment" />
           </div>)
@@ -89,6 +94,7 @@ class MainMenu extends React.Component {
           <div className="column" >
             <MainMenuButton title="Product" url="/product" />
             <MainMenuButton title="Customers" url="/customers" />
+            <MainMenuButton title="Employee" url="/employees" />
             <MainMenuButton title="Order" url="/order" />
             <MainMenuButton title="Payment" url="/Payment" />
           </div>)

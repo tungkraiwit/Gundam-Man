@@ -35,7 +35,7 @@ class Home extends React.Component {
                           </figure>
                         </div>
                         <div class="card-content">
-                          <p>{product.productName}</p>
+                          <p>{product.product_name}<br/>scale {product.product_scale}</p>
                         </div>
                       </div>
                     </div>
